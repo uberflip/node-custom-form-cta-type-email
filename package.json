@@ -1,0 +1,41 @@
+{
+  "name": "node-custom-form-cta-type-email",
+  "version": "1.0.0",
+  "description": "A sample custom form CTA type that sends submitted CTA data by email.",
+  "author": "Uberflip",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://git.flyptech.com/platform-samples/node-custom-form-cta-type-email.git"
+  },
+  "private": true,
+  "analyze": true,
+  "main": "index.js",
+  "scripts": {
+    "watch-start": "nodemon -x npm start",
+    "start": "node index.js",
+    "watch-test": "nodemon -x npm test",
+    "test": "standard && echint && mdspell -r -n --en-us '**/*.md' '!**/node_modules/**/*.md'"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "sendgrid": "^2.0.0",
+    "liquid-node": "^2.6.1",
+    "body-parser": "^1.15.0",
+    "bluebird": "^3.3.5"
+  },
+  "config": {
+    "from": "you@your-company.com",
+    "to": [
+      "coworker1@your-company.com",
+      "coworker2@your-company.com"
+    ],
+    "subject": "Uberflip Form CTA Submitted"
+  },
+  "devDependencies": {
+    "echint": "^1.5.3",
+    "markdown-spellcheck": "^0.10.0",
+    "nodemon": "^1.9.1",
+    "standard": "^6.0.8"
+  }
+}

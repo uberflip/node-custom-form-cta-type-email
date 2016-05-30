@@ -1,0 +1,31 @@
+<p>
+  An Uberflip form CTA was submitted with the following properties:
+</p>
+<table>
+  <tr>
+    <td>Hub ID</td>
+    <td>{{ hub_id }}</td>
+  </tr>
+  <tr>
+    <td>CTA ID</td>
+    <td>{{ cta_id }}</td>
+  </tr>
+  <tr>
+    <td>URL</td>
+    <td>{{ submission.url }}</td>
+  </tr>
+  <tr>
+    <td>IP Address</td>
+    <td>{{ submission.ip_address }}</td>
+  </tr>
+  <tr>
+    <td>Fields</td>
+    <td>
+      <ul>
+{% for field in submission.fields %}
+        <li>{{ field[0] }}: {{ field[1] }}</li>
+{% endfor %}
+      </ul>
+    </td>
+  </tr>
+</table>
